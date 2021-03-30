@@ -1,0 +1,4 @@
+*.exe
+*.vscode
+*.exe.dSYM
+*words
