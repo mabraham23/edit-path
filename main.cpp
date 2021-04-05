@@ -109,7 +109,7 @@ void read_files( std::vector<std::string> files ) {
 		if ( prev_graph_size == fileSize ) {
 			size_avg_time += avgTime;
 			size_avg_reps += 1;
-			if ( file == "words/words-1000-4.txt" ) {
+			if ( file == "words/words-1000-3.txt" ) {
 				r << fileSize << ", " << size_avg_time / size_avg_reps << std::endl;
 			}
 		}
@@ -119,7 +119,8 @@ void read_files( std::vector<std::string> files ) {
 			size_avg_time = avgTime;
 			size_avg_reps = 1;
 		}
-		p << file.substr(6, file.length()) << ", " << avgTime << ", " << totalCost << std::endl;
+		// p << file.substr(6, file.length()) << ", " << avgTime << ", " << totalCost << std::endl;
+		p << totalCost << std::endl;
 	}
 	r.close();
 	p.close();
